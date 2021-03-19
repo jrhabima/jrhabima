@@ -45,7 +45,6 @@ jobs:
          path: public # optional
      - name: Deploy to GitHub Pages
        uses: Cecilapp/GitHub-Pages-deploy@master
-         GITHUB_TOKEN: ${{ secrets.GH_PAT }}
        env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
        with:
