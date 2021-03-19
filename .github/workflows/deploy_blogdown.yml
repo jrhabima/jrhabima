@@ -45,11 +45,12 @@ jobs:
          path: public # optional
      - name: Deploy to GitHub Pages
        uses: Cecilapp/GitHub-Pages-deploy@master
+         GITHUB_TOKEN: ${{ secrets.GH_PAT }}
        env:
-          EMAIL: ${{ secrets.EMAIL }}               # must be a verified email
-          GH_TOKEN: ${{ secrets.GH_PAT }} # https://github.com/settings/tokens
-          BUILD_DIR: public/                       # "_site/" by default
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
        with:
+          email: ${{ secrets.EMAIL }}
           build_dir: public/
+
 
 
